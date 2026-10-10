@@ -13,7 +13,8 @@ export const WavyBackground = ({
   blur = 10,
   speed = "fast",
   waveOpacity = 0.5,
-  waveY = 0.55,
+  waveY = 0.5,
+  fixed = false,
   ...props
 }: {
   children?: any;
@@ -26,6 +27,7 @@ export const WavyBackground = ({
   speed?: "slow" | "fast";
   waveOpacity?: number;
   waveY?: number;
+  fixed?: boolean;
   [key: string]: any;
 }) => {
   const noise = createNoise3D();
@@ -85,7 +87,7 @@ export const WavyBackground = ({
       ctx.strokeStyle = waveColors[i % waveColors.length];
       for (x = 0; x < w; x += 5) {
         var y = noise(x / 800, 0.3 * i, nt) * 100;
-        ctx.lineTo(x, y + h * (waveY ?? 0.55));
+        ctx.lineTo(x, y + h * (waveY ?? 0.5));
       }
       ctx.stroke();
       ctx.closePath();
@@ -112,13 +114,38 @@ export const WavyBackground = ({
 
   const [isSafari, setIsSafari] = useState(false);
   useEffect(() => {
-    // Safari blur fallback support
     setIsSafari(
       typeof window !== "undefined" &&
         navigator.userAgent.includes("Safari") &&
         !navigator.userAgent.includes("Chrome")
     );
   }, []);
+
+  if (fixed) {
+    return (
+      <div
+        className={cn(
+          "fixed inset-0 pointer-events-none overflow-hidden z-0 w-screen h-screen",
+          containerClassName
+        )}
+      >
+        <canvas
+          className="w-full h-full pointer-events-none"
+          ref={canvasRef}
+          id="canvas"
+          style={{
+            zIndex: 0,
+            ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
+          }}
+        />
+        {children && (
+          <div className={cn("relative w-full h-full", className)} {...props}>
+            {children}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div
