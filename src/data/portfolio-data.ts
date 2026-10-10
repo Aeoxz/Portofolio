@@ -2,15 +2,15 @@ import { PortfolioData } from "@/types/portfolio";
 
 export const portfolioData: PortfolioData = {
   personal: {
-    name: "RAYHAN ADITYA",
-    role: "WEB DESIGNER",
-    subRole: "DIGITAL CREATOR",
+    name: "Azka Faiq",
+    role: "Data Analyst",
+    subRole: "Data Scientist",
     greeting: "Hello, I'm",
-    bio: "I design and build stylish, user-focused web experiences that combine creativity with strategy. Passionate about clean design, smooth interactions, and details that make a difference.",
+    bio: "Informatics Engineering graduate with experience in data processing, data validation, and machine learning. Skilled in Python and analytical problem-solving, with research experience in OCR-based data extraction and AI-driven profile validation. Interested in data analyst roles focused on transforming raw data into actionable insights to support data-driven decision-making.",
     availability: {
       freelance: true,
-      locationStatus: "AVAILABLE WORLDWIDE",
-      notice: "AVAILABLE FOR FREELANCE",
+      locationStatus: "South Tangerang/Greater Jakarta Area",
+      notice: "AVAILABLE FOR PROJECTS",
     },
     portraitImage: {
       src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
@@ -21,7 +21,7 @@ export const portfolioData: PortfolioData = {
       projectsCompleted: "40+",
       happyClients: "20+",
     },
-    tagline: "Turning ideas into powerful digital experiences.",
+    tagline: "Making data meaningful, actionable, and valuable for decision-making.",
   },
   projects: [
     {

@@ -30,10 +30,12 @@ const config: Config = {
         display: ["var(--font-bebas-neue)", "sans-serif"],
         script: ["var(--font-caveat)", "cursive"],
         heading: ["var(--font-oswald)", "sans-serif"],
+        ios: ["var(--font-teko)", "var(--font-bebas-neue)", "sans-serif"],
       },
       letterSpacing: {
         widest: "0.2em",
         mega: "0.25em",
+        tightest: "-0.04em",
       },
     },
   },
