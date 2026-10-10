@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b;
+  --foreground: #f3f4f6;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  selection-background-color: #dc2626;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
+}
+
+/* Utility Animations & Accents */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Red Glow Effect */
+.glow-red {
+  box-shadow: 0 0 25px -5px rgba(220, 38, 38, 0.45);
+}
+
+.glow-red-sm {
+  box-shadow: 0 0 12px -2px rgba(220, 38, 38, 0.4);
+}
+
+.text-glow-red {
+  text-shadow: 0 0 20px rgba(220, 38, 38, 0.6);
+}
+
+/* Red quote background gradient resembling the reference image */
+.quote-card-gradient {
+  background: linear-gradient(135deg, #7f1d1d 0%, #450a0a 60%, #1c0505 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-card-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(239, 68, 68, 0.25) 0%, transparent 60%);
+  pointer-events: none;
+}
