@@ -11,10 +11,10 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full border-b border-neutral-900 overflow-hidden bg-[#09090b]">
-      {/* Wavy Background Canvas Layer */}
+      {/* Wavy Background Canvas Layer (z-index: 1 on canvas) */}
       <WavyBackground
-        containerClassName="min-h-[92vh] w-full flex flex-col justify-between overflow-hidden bg-[#09090b]"
-        className="w-full min-h-[92vh] flex flex-col justify-between pt-6 pb-16 lg:py-12 relative"
+        containerClassName="min-h-[92vh] sm:min-h-[95vh] w-full flex flex-col justify-between overflow-hidden bg-[#09090b] relative"
+        className="w-full min-h-[92vh] sm:min-h-[95vh] flex flex-col justify-between pt-10 sm:pt-14 md:pt-16 pb-16 lg:pb-20 relative"
         colors={["#ef4444", "#dc2626", "#b91c1c", "#991b1b", "#7f1d1d"]}
         backgroundFill="#09090b"
         blur={12}
@@ -22,13 +22,14 @@ export default function HeroSection() {
         waveOpacity={0.32}
         waveWidth={50}
       >
-        {/* Background Giant Display Typography: "PORTFOLIO" in iOS Lock-Screen Vertical Style */}
+        {/* Background Giant Display Typography: "PORTFOLIO" (z-index: 2, layered on top of red waves) */}
         <div 
           aria-hidden="true"
-          className="pointer-events-none select-none absolute top-0 sm:top-2 md:top-4 left-0 right-0 flex justify-center items-center z-0 overflow-hidden"
+          style={{ zIndex: 2 }}
+          className="pointer-events-none select-none absolute top-4 sm:top-6 md:top-8 lg:top-10 left-0 right-0 flex justify-center items-center z-[2] overflow-visible"
         >
           <span 
-            className="font-ios uppercase text-[26vw] sm:text-[23vw] md:text-[21vw] font-black leading-[0.72] text-red-600/[0.88] drop-shadow-[0_15px_35px_rgba(220,38,38,0.38)] select-none opacity-95 transition-all duration-700 transform scale-y-[1.38] sm:scale-y-[1.48] scale-x-[0.92] origin-top tracking-tighter"
+            className="font-ios uppercase text-[22vw] sm:text-[20vw] md:text-[18.5vw] lg:text-[17.5vw] font-black leading-[0.85] text-red-600/[0.90] drop-shadow-[0_15px_35px_rgba(220,38,38,0.40)] select-none opacity-95 transition-all duration-700 transform scale-y-[1.28] sm:scale-y-[1.36] scale-x-[0.94] origin-top tracking-tight text-center"
             style={{ 
               textShadow: "0 0 45px rgba(220, 38, 38, 0.45)",
               display: "inline-block",
@@ -38,8 +39,11 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Hero Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto">
+        {/* Hero Content Container (z-index: 3, in foreground on top of PORTFOLIO title) */}
+        <div 
+          style={{ zIndex: 3 }}
+          className="relative z-[3] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-end min-h-[580px] lg:min-h-[660px]">
             
             {/* Left Column: Greeting, Name, Title, Bio & Availability */}
