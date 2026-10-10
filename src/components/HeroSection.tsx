@@ -11,27 +11,28 @@ export default function HeroSection() {
 
   return (
     <section className="relative w-full border-b border-neutral-900 overflow-hidden bg-[#09090b]">
-      {/* Wavy Background Canvas Layer (z-index: 1 on canvas) */}
+      {/* Wavy Background Canvas Layer (z-index: 1 on canvas, warm orange amber waves) */}
       <WavyBackground
         containerClassName="min-h-[92vh] sm:min-h-[95vh] w-full flex flex-col justify-between overflow-hidden bg-[#09090b] relative"
-        className="w-full min-h-[92vh] sm:min-h-[95vh] flex flex-col justify-between pt-10 sm:pt-14 md:pt-16 pb-16 lg:pb-20 relative"
-        colors={["#ef4444", "#dc2626", "#b91c1c", "#991b1b", "#7f1d1d"]}
+        className="w-full min-h-[92vh] sm:min-h-[95vh] flex flex-col justify-between pt-8 sm:pt-12 md:pt-14 pb-16 lg:pb-20 relative"
+        colors={["#f97316", "#ea580c", "#fb923c", "#d97706", "#c2410c"]}
         backgroundFill="#09090b"
-        blur={12}
+        blur={14}
         speed="fast"
-        waveOpacity={0.32}
-        waveWidth={50}
+        waveOpacity={0.18}
+        waveWidth={45}
+        waveY={0.62}
       >
-        {/* Background Giant Display Typography: "PORTFOLIO" (z-index: 2, layered on top of red waves) */}
+        {/* Background Giant Display Typography: "PORTFOLIO" (z-index: 2, sized & placed to match purple marker) */}
         <div 
           aria-hidden="true"
           style={{ zIndex: 2 }}
-          className="pointer-events-none select-none absolute top-4 sm:top-6 md:top-8 lg:top-10 left-0 right-0 flex justify-center items-center z-[2] overflow-visible"
+          className="pointer-events-none select-none absolute top-2 sm:top-3 md:top-4 lg:top-5 left-0 right-0 flex justify-center items-start z-[2] overflow-visible"
         >
           <span 
-            className="font-ios uppercase text-[22vw] sm:text-[20vw] md:text-[18.5vw] lg:text-[17.5vw] font-black leading-[0.85] text-red-600/[0.90] drop-shadow-[0_15px_35px_rgba(220,38,38,0.40)] select-none opacity-95 transition-all duration-700 transform scale-y-[1.28] sm:scale-y-[1.36] scale-x-[0.94] origin-top tracking-tight text-center"
+            className="font-ios uppercase text-[23vw] sm:text-[21vw] md:text-[20vw] lg:text-[19.5vw] font-black leading-[0.72] text-red-600/[0.92] select-none opacity-95 transition-all duration-700 transform scale-y-[1.68] sm:scale-y-[1.8] md:scale-y-[1.9] scale-x-[0.96] origin-top tracking-tighter text-center"
             style={{ 
-              textShadow: "0 0 45px rgba(220, 38, 38, 0.45)",
+              textShadow: "0 0 35px rgba(220, 38, 38, 0.65), 0 0 70px rgba(220, 38, 38, 0.35)",
               display: "inline-block",
             }}
           >
@@ -70,7 +71,7 @@ export default function HeroSection() {
               </div>
 
               {/* Bio Paragraph */}
-              <p className="text-xs sm:text-sm text-neutral-400 font-sans leading-relaxed max-w-sm">
+              <p className="text-xs sm:text-sm text-neutral-300 font-sans leading-relaxed max-w-sm drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)]">
                 {personal.bio}
               </p>
 
