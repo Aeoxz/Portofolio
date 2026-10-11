@@ -68,14 +68,14 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Center Column: Portrait Cutout Area (Clean PNG transparency, no container box or side shadows) */}
-          <div className="lg:col-span-5 relative flex justify-center items-end order-1 lg:order-2 h-[440px] sm:h-[540px] lg:h-[650px]">
-            <div className="relative w-full h-full flex items-end justify-center">
+          {/* Center Column: Portrait Cutout Area (Symmetrical with Explore Work baseline & matching purple box bounds) */}
+          <div className="lg:col-span-5 relative flex justify-center items-end order-1 lg:order-2 h-[500px] sm:h-[600px] lg:h-[700px] lg:pb-8">
+            <div className="relative w-full h-full max-w-lg lg:max-w-xl flex items-end justify-center">
               <div 
-                className="relative w-full h-full max-w-md lg:max-w-lg"
+                className="relative w-full h-full"
                 style={{
-                  maskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
+                  maskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
                 }}
               >
                 <Image
@@ -83,8 +83,8 @@ export default function HeroSection() {
                   alt={personal.portraitImage.alt}
                   fill
                   priority
-                  className="object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
+                  className="object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.65)]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
                 />
               </div>
             </div>
