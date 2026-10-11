@@ -13,8 +13,8 @@ export const portfolioData: PortfolioData = {
       notice: "AVAILABLE FOR PROJECTS",
     },
     portraitImage: {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop",
-      alt: "Rayhan Aditya - Web Designer & UI/UX Creator",
+      src: "/azka-portrait.png",
+      alt: "Azka Faiq - Data Analyst & Data Scientist",
     },
     stats: {
       yearsExperience: "3+",

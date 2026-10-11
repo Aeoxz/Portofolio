@@ -68,29 +68,24 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Center Column: Portrait Image Area */}
-          <div className="lg:col-span-5 relative flex justify-center items-end order-1 lg:order-2 h-[420px] sm:h-[520px] lg:h-[640px]">
-            {/* Subtle backlight red glow behind portrait */}
-            <div className="absolute bottom-12 w-64 h-64 bg-red-600/20 blur-3xl rounded-full pointer-events-none" />
-
-            {/* Portrait Image with dark gradient blend */}
-            <div className="relative w-full h-full max-w-md mx-auto flex items-end justify-center">
-              <div className="relative w-full h-full">
+          {/* Center Column: Portrait Cutout Area (Clean PNG transparency, no container box or side shadows) */}
+          <div className="lg:col-span-5 relative flex justify-center items-end order-1 lg:order-2 h-[440px] sm:h-[540px] lg:h-[650px]">
+            <div className="relative w-full h-full flex items-end justify-center">
+              <div 
+                className="relative w-full h-full max-w-md lg:max-w-lg"
+                style={{
+                  maskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
+                  WebkitMaskImage: "linear-gradient(to bottom, black 85%, transparent 100%)",
+                }}
+              >
                 <Image
                   src={personal.portraitImage.src}
                   alt={personal.portraitImage.alt}
                   fill
                   priority
-                  className="object-cover object-top brightness-95 contrast-110 filter saturate-[0.85] rounded-b-xl"
+                  className="object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)]"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 40vw"
                 />
-
-                {/* Bottom gradient fade into dark page */}
-                <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-[#09090b] via-[#09090b]/80 to-transparent pointer-events-none" />
-                
-                {/* Side subtle vignette gradient for seamless blending */}
-                <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[#09090b]/50 to-transparent pointer-events-none hidden lg:block" />
-                <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[#09090b]/50 to-transparent pointer-events-none hidden lg:block" />
               </div>
             </div>
           </div>
