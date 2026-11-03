@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Sparkles, Menu, X, ArrowUpRight } from "lucide-react";
 import { portfolioData } from "@/data/portfolio-data";
 
@@ -9,36 +10,36 @@ export default function Navbar() {
   const { personal } = portfolioData;
 
   const navLinks = [
-    { label: "Projects", href: "#projects" },
-    { label: "Education & Skills", href: "#education-skills" },
-    { label: "Process", href: "#process" },
-    { label: "Contact", href: "#contact" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Education & Skills", href: "/#education-skills" },
+    { label: "Certifications", href: "/certifications" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#09090b]/85 backdrop-blur-md border-b border-neutral-900/80 transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Left Sub-brand / Role */}
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 group cursor-pointer">
           <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
-          <span className="text-xs uppercase tracking-widest font-semibold text-neutral-300 font-mono">
+          <span className="text-xs uppercase tracking-widest font-semibold text-neutral-300 font-mono group-hover:text-white transition-colors">
             {personal.role}{" "}
             <span className="text-red-500 font-bold mx-1">/</span>{" "}
             {personal.subRole}
           </span>
-        </div>
+        </Link>
 
         {/* Center Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-mono text-neutral-400">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className="hover:text-white transition-colors duration-200 relative group py-1"
             >
               {link.label}
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full" />
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -73,7 +74,7 @@ export default function Navbar() {
         <div className="md:hidden bg-neutral-950/95 border-b border-neutral-900 px-6 py-6 space-y-4">
           <div className="flex flex-col space-y-3 font-mono text-sm tracking-wider">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
@@ -81,19 +82,19 @@ export default function Navbar() {
               >
                 {link.label}
                 <ArrowUpRight className="w-4 h-4 text-neutral-500" />
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="pt-4 border-t border-neutral-900">
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-red-600/10 border border-red-600/40 text-red-400 text-xs font-mono tracking-widest uppercase hover:bg-red-600 hover:text-white transition-all"
             >
               <span className="w-2 h-2 rounded-full bg-red-500" />
               {personal.availability.notice}
-            </a>
+            </Link>
           </div>
         </div>
       )}

@@ -102,38 +102,38 @@ export default function HeroSection() {
               </p>
             </div>
 
-            {/* Side Stats Counters (Version 1 Scale) */}
+            {/* Side Stats Counters */}
             <div className="space-y-6 pt-2">
-              {/* Stat 1 */}
+              {/* Stat 1: GPA */}
               <div className="flex items-center gap-4 group">
                 <div className="font-heading font-bold text-4xl sm:text-5xl text-red-600 tracking-tight transition-transform duration-300 group-hover:scale-105">
-                  {personal.stats.yearsExperience}
+                  {personal.stats.gpa}
                 </div>
                 <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 font-semibold leading-tight border-l border-neutral-800 pl-3">
-                  Years <br />
-                  <span className="text-neutral-500">Experience</span>
+                  Cumulative GPA <br />
+                  <span className="text-neutral-500">Scale 4.00</span>
                 </div>
               </div>
 
-              {/* Stat 2 */}
+              {/* Stat 2: TOEFL ITP */}
               <div className="flex items-center gap-4 group">
                 <div className="font-heading font-bold text-4xl sm:text-5xl text-red-600 tracking-tight transition-transform duration-300 group-hover:scale-105">
-                  {personal.stats.projectsCompleted}
+                  {personal.stats.toefl}
                 </div>
                 <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 font-semibold leading-tight border-l border-neutral-800 pl-3">
-                  Projects <br />
-                  <span className="text-neutral-500">Completed</span>
+                  TOEFL ITP <br />
+                  <span className="text-neutral-500">ETS Certified (C1)</span>
                 </div>
               </div>
 
-              {/* Stat 3 */}
+              {/* Stat 3: Conference */}
               <div className="flex items-center gap-4 group">
-                <div className="font-heading font-bold text-4xl sm:text-5xl text-red-600 tracking-tight transition-transform duration-300 group-hover:scale-105">
-                  {personal.stats.happyClients}
+                <div className="font-heading font-bold text-3xl sm:text-4xl text-red-600 tracking-tight transition-transform duration-300 group-hover:scale-105">
+                  {personal.stats.conference}
                 </div>
                 <div className="text-[11px] font-mono uppercase tracking-wider text-neutral-400 font-semibold leading-tight border-l border-neutral-800 pl-3">
-                  Happy <br />
-                  <span className="text-neutral-500">Clients</span>
+                  IEEE &apos;26 <br />
+                  <span className="text-neutral-500">Author & Presenter</span>
                 </div>
               </div>
             </div>

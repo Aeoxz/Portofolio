@@ -35,22 +35,26 @@ const teko = Teko({
 });
 
 export const metadata: Metadata = {
-  title: "Rayhan Aditya | Web Designer & UI/UX Creator",
+  title: "Azka Faiq Suharyanto | Informatics Engineer & Data Scientist",
   description:
-    "Personal portfolio template for creative web designers and UI/UX developers featuring dark aesthetics with bold red accents.",
+    "Portfolio of Azka Faiq Suharyanto — Fresh Informatics Engineering graduate of Universitas Mercu Buana focused on Python, Data Science, Applied Machine Learning, PaddleOCR, and UI/UX Design.",
   keywords: [
+    "Azka Faiq Suharyanto",
+    "Informatics Engineering",
+    "Data Scientist",
+    "Machine Learning",
+    "PaddleOCR",
+    "Computer Vision",
+    "Python",
+    "Universitas Mercu Buana",
+    "ICICoS 2026",
     "Portfolio",
-    "Web Designer",
-    "UI/UX",
-    "Frontend Developer",
-    "Next.js",
-    "Tailwind CSS",
-    "TypeScript",
   ],
-  authors: [{ name: "Rayhan Aditya" }],
+  authors: [{ name: "Azka Faiq Suharyanto" }],
   openGraph: {
-    title: "Rayhan Aditya | Web Designer & UI/UX Creator",
-    description: "Turning ideas into powerful digital experiences.",
+    title: "Azka Faiq Suharyanto | Informatics Engineer & Data Scientist",
+    description:
+      "Bridging machine learning research, data pipelines, and intelligent software engineering.",
     type: "website",
   },
 };

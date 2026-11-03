@@ -152,22 +152,22 @@ export default function ContactSection() {
                   <span className="w-2 h-2 rounded-full bg-neutral-700" />
                 </div>
                 <span className="text-[9px] font-mono uppercase tracking-wider text-neutral-500">
-                  rayhanaditya.com
+                  github.com/Aeoxz
                 </span>
               </div>
 
               {/* Mock Screen Content */}
               <div className="py-2 space-y-1">
                 <p className="text-[10px] font-heading uppercase font-bold text-white tracking-wider leading-tight">
-                  WE DESIGN <br />
-                  <span className="text-red-500">DIGITAL EXPERIENCES</span>
+                  APPLIED ML &amp; <br />
+                  <span className="text-red-500">DATA SCIENCE PIPELINES</span>
                 </p>
                 <div className="h-1 w-8 bg-red-600 rounded-full" />
               </div>
 
               {/* Laptop bottom bar */}
               <div className="flex items-center justify-between pt-2 border-t border-neutral-800 text-[8px] font-mono text-neutral-500">
-                <span>UI/UX CREATIVE STUDIO</span>
+                <span>INFORMATICS ENGINEERING</span>
                 <span className="text-red-400">ACTIVE</span>
               </div>
             </div>
@@ -181,9 +181,9 @@ export default function ContactSection() {
                 </span>
               </div>
               
-              {/* Coffee mug badge with 'R' logo */}
-              <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center font-heading font-bold text-xs text-red-500 shadow-md" title="Rayhan Coffee Mug">
-                R
+              {/* Coffee mug badge with 'A' logo */}
+              <div className="w-7 h-7 rounded-full bg-neutral-900 border border-neutral-700 flex items-center justify-center font-heading font-bold text-xs text-red-500 shadow-md" title="Azka Coffee Mug">
+                A
               </div>
             </div>
           </div>
